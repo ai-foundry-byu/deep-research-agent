@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deep-research-agent"
+version = "1.0.0"
+description = "Iterative, multi-source, adversarially-verified deep research agent with a knowledge-gap loop, 9 parallel sources, and per-claim refute-or-survive fact-checking."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["research", "agent", "llm", "rag", "fact-checking", "openrouter", "claude", "brave-search"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "httpx>=0.24",
+    "requests>=2.28",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+# HTTP API server (deep_research/server.py)
+server = ["fastapi>=0.100", "uvicorn>=0.22", "pydantic>=2.0"]
+# Direct-Anthropic fallback when OpenRouter is unavailable
+anthropic = ["anthropic>=0.30"]
+# Scheduled recurring research jobs (deep_research/core/scheduler.py)
+schedule = ["pyyaml>=6.0"]
+# HTML / PDF report export (deep_research/core/formatter.py)
+export = ["markdown>=3.4", "weasyprint>=60.0"]
+# Everything
+all = [
+    "fastapi>=0.100", "uvicorn>=0.22", "pydantic>=2.0",
+    "anthropic>=0.30", "pyyaml>=6.0", "markdown>=3.4", "weasyprint>=60.0",
+]
+dev = ["pytest>=7.0", "pytest-asyncio>=0.21"]
+
+[project.urls]
+Homepage = "https://github.com/JDDavenport/deep-research-agent"
+Repository = "https://github.com/JDDavenport/deep-research-agent"
+
+[project.scripts]
+deep-research = "deep_research.main:main"
+
+[tool.setuptools.packages.find]
+include = ["deep_research*"]

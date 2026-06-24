@@ -1,0 +1,32 @@
+# Secrets
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Agent state / outputs
+deep-research-reports/
+.deep-research/
+*.db
+research_cache.db
+research_schedules.yaml
+scheduler.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

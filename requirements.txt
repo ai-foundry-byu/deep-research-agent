@@ -1,0 +1,23 @@
+# Core runtime (required)
+httpx>=0.24
+requests>=2.28
+python-dotenv>=1.0
+
+# HTTP API server (optional — only for deep_research/server.py)
+fastapi>=0.100
+uvicorn>=0.22
+pydantic>=2.0
+
+# Direct-Anthropic fallback (optional — only fires when OpenRouter is unavailable)
+anthropic>=0.30
+
+# Scheduled recurring research jobs (optional)
+pyyaml>=6.0
+
+# HTML / PDF report export (optional)
+markdown>=3.4
+weasyprint>=60.0
+
+# Tests (optional)
+pytest>=7.0
+pytest-asyncio>=0.21
