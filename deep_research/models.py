@@ -391,7 +391,7 @@ async def query_openrouter(
                     "https://openrouter.ai/api/v1/chat/completions",
                     headers={
                         "Authorization": f"Bearer {api_key}",
-                        "HTTP-Referer": "https://github.com/JDDavenport/deep-research-agent",
+                        "HTTP-Referer": "https://github.com/jddavenportOpen/deep-research-agent",
                         "X-Title": "Research Agent",
                     },
                     json={

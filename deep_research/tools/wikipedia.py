@@ -8,7 +8,7 @@ async def wikipedia_search(query: str) -> str:
     try:
         headers = {"User-Agent": os.environ.get(
             "RESEARCH_USER_AGENT",
-            "deep-research-agent/1.0 (https://github.com/JDDavenport/deep-research-agent)",
+            "deep-research-agent/1.0 (https://github.com/jddavenportOpen/deep-research-agent)",
         )}
         async with httpx.AsyncClient(timeout=30.0, headers=headers) as client:
             # First, search for matching articles

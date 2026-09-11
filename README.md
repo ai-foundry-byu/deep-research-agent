@@ -188,7 +188,7 @@ into the report's frontmatter.
 ## Install
 
 ```bash
-git clone https://github.com/JDDavenport/deep-research-agent.git
+git clone https://github.com/jddavenportOpen/deep-research-agent.git
 cd deep-research-agent
 
 python -m venv .venv && source .venv/bin/activate
