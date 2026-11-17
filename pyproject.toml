@@ -40,8 +40,8 @@ all = [
 dev = ["pytest>=7.0", "pytest-asyncio>=0.21"]
 
 [project.urls]
-Homepage = "https://github.com/jddavenportOpen/deep-research-agent"
-Repository = "https://github.com/jddavenportOpen/deep-research-agent"
+Homepage = "https://github.com/ai-foundry-byu/deep-research-agent"
+Repository = "https://github.com/ai-foundry-byu/deep-research-agent"
 
 [project.scripts]
 deep-research = "deep_research.main:main"
